@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pour Cinthya ❤️ - Mon Amour</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="bg-animation" id="bgAnimation"></div>
+    <div class="hearts-container" id="heartsContainer"></div>
+    <div class="particles" id="particles"></div>
+
+    <!-- Welcome Overlay -->
+    <div class="welcome-overlay" id="welcomeOverlay">
+        <div class="welcome-content">
+            <div class="welcome-heart">❤️</div>
+            <h1 class="welcome-title">Une surprise pour toi bb...</h1>
+            <p class="welcome-subtitle">Are you ready?</p>
+            <button class="enter-btn" id="enterBtn">
+                <span>YES</span>
+                <i class="fas fa-heart"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <div class="floating-hearts" id="floatingHearts"></div>
+            <div class="hero-text">
+                <p class="greeting">Bonjour mon amour 💕</p>
+                <h1 class="title">Pour toi, <span class="name" id="nameText">Choupi</span></h1>
+                <p class="subtitle">Voici quelques mots pour te dire...</p>
+                <div class="typing-text" id="typingText"></div>
+            </div>
+            <div class="scroll-hint" id="scrollHint">
+                <span>Découvrir</span>
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Love Counter Section -->
+    <section class="counter-section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-icon">👩‍❤️‍💋‍👨</span>
+                Notre Belle Histoire
+            </h2>
+            <div class="counter-wrapper">
+                <p class="counter-intro">Ensemble depuis le</p>
+                <p class="counter-date">18 Septembre 2021</p>
+            </div>
+            <div class="counter-container">
+                <div class="counter-item">
+                    <span class="counter-number" id="years">0</span>
+                    <span class="counter-label">Ans</span>
+                </div>
+                <div class="counter-separator">:</div>
+                <div class="counter-item">
+                    <span class="counter-number" id="months">0</span>
+                    <span class="counter-label">Mois</span>
+                </div>
+                <div class="counter-separator">:</div>
+                <div class="counter-item">
+                    <span class="counter-number" id="days">0</span>
+                    <span class="counter-label">Jours</span>
+                </div>
+                <div class="counter-separator">:</div>
+                <div class="counter-item">
+                    <span class="counter-number" id="hours">0</span>
+                    <span class="counter-label">Heures</span>
+                </div>
+                <div class="counter-separator">:</div>
+                <div class="counter-item">
+                    <span class="counter-number" id="minutes">0</span>
+                    <span class="counter-label">Minutes</span>
+                </div>
+                <div class="counter-separator">:</div>
+                <div class="counter-item">
+                    <span class="counter-number" id="seconds">0</span>
+                    <span class="counter-label">Secondes</span>
+                </div>
+            </div>
+            <p class="love-quote">"Chaque seconde avec toi est un trésor 💎"</p>
+        </div>
+    </section>
+
+    <!-- Compliments Section -->
+    <section class="compliments-section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-icon">✨</span>
+                Pourquoi tu es speciale
+            </h2>
+            <div class="compliments-grid">
+                <div class="compliment-card" data-aos="fade-up">
+                    <div class="compliment-icon">🌟</div>
+                    <h3>Tu es magnifique</h3>
+                    <p>Tu illumines mes journées avec ton sourire chaque fois que je te vois</p>
+                </div>
+                <div class="compliment-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="compliment-icon">💖</div>
+                    <h3>Tu es gentille</h3>
+                    <p>Ton cœur est aussi doux que ta voix</p>
+                </div>
+                <div class="compliment-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="compliment-icon">🦋</div>
+                    <h3>Tu es unique</h3>
+                    <p>Tu es la seule dans mon coeur</p>
+                </div>
+                <div class="compliment-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="compliment-icon">💕</div>
+                    <h3>Tu es mon tout</h3>
+                    <p>Tu completes ma vie comme personne d'autre, ma moitié</p>
+                </div>
+                <div class="compliment-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="compliment-icon">🌹</div>
+                    <h3>Tu es belle</h3>
+                    <p>Pour moi, t'es la plus belle au monde</p>
+                </div>
+                <div class="compliment-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="compliment-icon">💝</div>
+                    <h3>Tu es mon amour</h3>
+                    <p>Tu as vollé mon coeur</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Section -->
+    <section class="photo-section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-icon">📸</span>
+                Nos Souvenirs
+            </h2>
+            <div class="photo-grid">
+                <div class="photo-frame">
+                    <img src="images/Photo1.jpeg" alt="Notre photo" class="photo">
+                </div>
+                <div class="photo-frame">
+                    <img src="images/Photo2.jpeg" alt="Notre photo" class="photo">
+                </div>
+                <div class="photo-frame">
+                    <img src="images/Photo3.jpeg" alt="Notre photo" class="photo">
+                </div>
+                <div class="photo-frame">
+                    <img src="images/Photo4.jpeg" alt="Notre photo" class="photo">
+                </div>
+                <div class="photo-frame">
+                    <video class="photo" controls>
+                        <source src="images/vid.mp4" type="video/mp4">
+                        Votre navigateur ne supporte pas la vidéo.
+                    </video>
+                </div>
+                <div class="photo-frame">
+                    <img src="images/Photo6.jpeg" alt="Notre photo" class="photo">
+                </div>
+            </div>
+            <p class="photo-hint">Quelque uns de nos plus beaux moments ensemble 💕</p>
+        </div>
+
+        <!-- Lightbox -->
+        <div id="lightbox" class="lightbox">
+            <span class="lightbox-close">&times;</span>
+            <img class="lightbox-img" src="" alt="" style="display: none;">
+            <video class="lightbox-video" controls style="display: none;">
+                <source src="" type="video/mp4">
+                Votre navigateur ne supporte pas la vidéo.
+            </video>
+        </div>
+    </section>
+
+    <!-- Love Letter Section -->
+    <section class="letter-section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-icon">💌</span>
+                Venue tout droit de mon coeur pour toi !
+            </h2>
+            <div class="letter-wrapper">
+                <div class="envelope" id="envelope">
+                    <div class="envelope-flap"></div>
+                    <div class="envelope-body">
+                        <div class="letter-content" id="letterContent">
+                            <p class="letter-text">Choupi, mon amour 💕</p>
+                            <p class="letter-text">Chaque jour passé à tes côtés me rappelle à quel point je suis chanceux de t'avoir.</p>
+                            <p class="letter-text">Tu es mon sourire du matin, ma douceur du soir, et tout ce qui rend ma vie belle.</p>
+                            <p class="letter-text">En cette Saint-Valentin, je veux que tu saches que :</p>
+                            <ul class="letter-list">
+                                <li>✨ Tu es la plus belle âme</li>
+                                <li>💖 Ton rire est ma mélodie préférée</li>
+                                <li>🌹 Chaque moment avec toi est spécial</li>
+                                <li>💝 Je t'aime plus que les mots ne peuvent le dire</li>
+                            </ul>
+                            <p class="letter-text">Joyeuse SAINT-VALENTIN BB💘</p>
+                            <p class="letter-signature">Lysias Eldad ❤️</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="open-letter-btn" id="openLetterBtn">
+                    <span class="btn-text">Ouvrir ma lettre</span>
+                    <span class="btn-icon">💌</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sweet Messages Section -->
+    <section class="messages-section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-icon">💬</span>
+                Quelques mots...
+            </h2>
+            <div class="messages-slider" id="messagesSlider">
+                <div class="message-card active">
+                    <p class="message-text">"Ma choupi, mon combat🤧"</p>
+                </div>
+                <div class="message-card">
+                    <p class="message-text">"Je ferai toujours battre ton coeur 💓"</p>
+                </div>
+                <div class="message-card">
+                    <p class="message-text">"Tu es mon 爱情 (Amour en chinois) ❤️😂"</p>
+                </div>
+                <div class="message-card">
+                    <p class="message-text">"Avec toi, chaque moment est magique ✨"</p>
+                </div>
+                <div class="message-card">
+                    <p class="message-text">"Je t'aime !❤️"</p>
+                </div>
+            </div>
+            <div class="slider-dots" id="sliderDots"></div>
+        </div>
+    </section>
+
+    <!-- Fun Quiz Section -->
+    <section class="quiz-section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-icon">🎯</span>
+                Petit jeu pour toi
+            </h2>
+            <div class="quiz-card">
+                <p class="quiz-question">Combien de fois je pense à toi par jour ?</p>
+                <div class="quiz-options">
+                    <button class="quiz-btn" data-answer="wrong">10 fois</button>
+                    <button class="quiz-btn" data-answer="wrong">50 fois</button>
+                    <button class="quiz-btn" data-answer="right">∞ fois (l'infini !)</button>
+                    <button class="quiz-btn" data-answer="wrong">100 fois</button>
+                </div>
+                <p class="quiz-result" id="quizResult"></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Section -->
+    <section class="quote-section">
+        <div class="container">
+            <div class="quote-box">
+                <p class="quote-text">"L'amour est la seule force qui peut transformer le quotidien en magique ✨"</p>
+                <p class="quote-author">- Pour Cinthya, mon amour 💕</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p class="footer-text">Fait avec ❤️ et tout mon amour</p>
+            <p class="footer-name">Pour toi Cinthya 💕</p>
+            <p class="footer-date">Saint-Valentin 2026</p>
+            <div class="footer-hearts">
+                <span>❤️</span><span>💕</span><span>💖</span><span>💗</span><span>💘</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

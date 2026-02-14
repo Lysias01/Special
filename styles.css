@@ -243,6 +243,7 @@ body {
     align-items: center;
     text-align: center;
     padding: 20px;
+    padding-bottom: 140px; /* réserver de l'espace pour le scroll-hint et éviter la superposition */
     position: relative;
     overflow: hidden;
 }
@@ -257,6 +258,7 @@ body {
     height: 800px;
     background: radial-gradient(circle, rgba(255, 71, 126, 0.3) 0%, transparent 60%);
     animation: heroGlow 4s ease-in-out infinite;
+    z-index: 0; /* placer le halo derrière le contenu */
 }
 
 @keyframes heroGlow {
@@ -265,8 +267,9 @@ body {
 }
 
 .hero-content {
-    z-index: 1;
+    z-index: 2; /* contenu au-dessus du halo et des coeurs flottants */
     position: relative;
+    padding-bottom: 160px; /* réserver explicitement l'espace pour le scroll-hint */
 }
 
 .floating-hearts {
@@ -276,6 +279,7 @@ body {
     top: 0;
     left: 0;
     pointer-events: none;
+    z-index: 1; /* coeurs derrière le contenu principal mais devant le halo */
 }
 
 .floating-heart {
@@ -368,7 +372,50 @@ body {
     align-items: center;
     gap: 15px;
     animation: bounce 2s infinite;
+    z-index: 2; /* s'assurer que le hint est au-dessus du texte */
 }
+
+/* Responsive fixes: réduire les tailles et augmenter l'espace bas sur petits écrans
+   pour éviter la superposition entre le texte (typing) et le scroll-hint */
+@media (max-width: 900px) {
+    .hero-content {
+        padding-bottom: 200px;
+    }
+
+    .hero-text {
+        margin-bottom: 30px;
+    }
+
+    .title {
+        font-size: clamp(2.2rem, 10vw, 4rem);
+    }
+
+    .typing-text {
+        min-height: 70px;
+    }
+
+    .scroll-hint {
+        bottom: 18px;
+    }
+}
+
+@media (max-width: 420px) {
+    .hero-content {
+        padding-bottom: 240px;
+    }
+
+    .title {
+        font-size: clamp(1.8rem, 12vw, 3.2rem);
+    }
+
+    .greeting {
+        font-size: 1.2rem;
+    }
+
+    .typing-text::after { display: inline-block; }
+}
+
+
 
 .scroll-hint span {
     font-size: 0.9rem;
@@ -1164,24 +1211,4 @@ footer::before {
     }
 }
 
-/* ========================================
-   RESPONSIVE - MOBILE
-   ======================================== */
-@media (max-width: 480px) {
-    .welcome-heart {
-        font-size: 60px;
-    }
-    
-    .enter-btn {
-        padding: 16px 40px;
-        font-size: 1.1rem;
-    }
-    
-    .title {
-        font-size: 2.5rem;
-    }
-    
-    .counter-container {
-        gap: 8px;
-    }
-}
+/* RESPONSIVE - MOBILE */

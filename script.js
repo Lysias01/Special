@@ -1,5 +1,5 @@
 /* ========================================
-   JAVASCRIPT POUR CINTHYA - VERSION COMPLÈTE
+   JAVASCRIPT POUR CINTHYA -
    Saint-Valentin 2026
    ======================================== */
 
@@ -12,10 +12,11 @@ const startDate = new Date('2021-09-18T00:00:00');
 document.addEventListener('DOMContentLoaded', () => {
     const welcomeOverlay = document.getElementById('welcomeOverlay');
     const enterBtn = document.getElementById('enterBtn');
-    
+
     // Masquer l'overlay quand on clique sur Entrer
     enterBtn.addEventListener('click', () => {
         welcomeOverlay.classList.add('hidden');
+
         // Démarrer les animations après l'entrée
         setTimeout(() => {
             startAllAnimations();
@@ -419,3 +420,4 @@ lightbox.addEventListener('click', e => {
         lightboxVideo.pause();
     }
 });
+
